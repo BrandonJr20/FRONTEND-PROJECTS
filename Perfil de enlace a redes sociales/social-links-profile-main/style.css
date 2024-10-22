@@ -1,0 +1,96 @@
+@font-face { 
+    font-family: "Inter"; 
+    src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf); 
+  }
+  
+  :root {
+    --ColorGreen: hsl(75, 94%, 57%);
+    --ColorWhite: hsl(0, 0%, 100%);
+    --ColorGrey_700: hsl(0, 0%, 20%);
+    --ColorGrey_800: hsl(0, 0%, 12%);
+    --ColorGrey_900: hsl(0, 0%, 8%);
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem; /* Usa rem para que sea relativo al tamaño base de fuente */
+    color: white;
+  }
+  
+  body {
+    background-color: var(--ColorGrey_900);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .card {
+    background-color: var(--ColorGrey_800);
+    padding: 3vw;
+    border-radius: 2rem; /* Usa rem para el borde redondeado */
+    max-width: 100%; /* Limita el ancho de la tarjeta */
+    width: 400px; /* O puedes usar vw si prefieres */
+  }
+  
+  .card-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .card-description img {
+    border-radius: 50%; /* Redondeado completo */
+    width: 25vw; /* Usa vw para el tamaño de la imagen */
+    max-width: 100px; /* Limita el tamaño en pantallas grandes */
+    margin: 2vw;
+  }
+  
+  .card-name {
+    font-size: 1.5rem; /* Relativo al tamaño base */
+    margin: 1rem;
+    font-weight: 600;
+  }
+  
+  .card-location {
+    color: var(--ColorGreen);
+    font-size: 1rem;
+    margin: 0.5rem;
+    font-weight: 700;
+  }
+  
+  .card-job {
+    font-weight: 400;
+    margin: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .card-links {
+    margin: 1rem 0;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .card-link {
+    background-color: var(--ColorGrey_700);
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem 0;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  
+  .card-link:active, .card-link:hover {
+    background-color: var(--ColorGreen);
+    color: var(--ColorGrey_700);
+    transform: scale(1.01);
+    cursor: pointer;
+  }
+  
