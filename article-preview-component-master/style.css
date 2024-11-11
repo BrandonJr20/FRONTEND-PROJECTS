@@ -87,7 +87,8 @@ footer {
 .share-buttons p {
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--ColorDesaturatedDarkBlue);
+    color: white;
+    opacity: 0.5;
 }
 
 
