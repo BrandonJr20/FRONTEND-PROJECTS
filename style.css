@@ -108,8 +108,8 @@ header p{
     z-index: 0;
     top: 0;
     position: absolute;
-    width: 16%;
-    height: 8%;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     animation-name: burbujas;
     animation-duration: 2s;
@@ -167,14 +167,22 @@ header p{
       text-align: center;   
    }
 
+   body{
+      padding: 5vw;
+   }
+
+   main{
+      padding: 5vw;
+   }
+
    section{
       width: 100%;
-      padding: 2vw;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
    }
+
    a{
       width: 100%;
       margin: 2vw;
