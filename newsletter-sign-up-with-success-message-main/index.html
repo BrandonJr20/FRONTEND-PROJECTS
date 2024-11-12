@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main id="vistaFormulario">
+    <section class="section-form">
+      <h1>
+        Stay updated!
+      </h1>
+      <span>
+        Join 60,000+ product managers receiving monthly updates on:
+      </span>
+
+      <p><img src="assets/images/icon-list.svg" alt="">
+        Product discovery and building what matters
+      </p>
+
+      <p><img src="assets/images/icon-list.svg" alt="">
+        Measuring to ensure updates are a success
+      </p>
+
+      <p><img src="assets/images/icon-list.svg" alt="">
+        And much more!
+      </p>
+
+      <form action="" method="post" id="form" novalidate>
+        <div class="description">
+          <label for="correo">
+            Email address
+          </label>
+          <p id="errorEmail" style="color: red;"></p>
+        </div>
+        <input type="email" placeholder="email@company.com" id="email">
+        <input type="submit" value="Subscribe to monthly newsletter" id="btnRegistrar">
+        <a href="sucefull.html"></a>
+      </form>
+
+    </section>
+    <div class="img-section">
+      <picture>
+        <source srcset="assets/images/illustration-sign-up-mobile.svg" media="(max-width: 500px)">
+        <!-- Tamano para pantallas de 500px -->
+        <source srcset="assets/images/illustration-sign-up-desktop.svg" media="(min-width: 501px)">
+        <img src="assets/images/illustration-sign-up-desktop.svg">
+      </picture>
+    </div>
+  </main>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.linkedin.com/in/brandonjrcortez/" target="_blank">Brandon Cortez</a>.
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>
