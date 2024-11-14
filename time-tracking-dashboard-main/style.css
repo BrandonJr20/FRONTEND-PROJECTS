@@ -79,11 +79,13 @@ main {
 /* Diseño para dispositivos moviles */
 @media (max-width:500px) {
     body {
+        padding: 8vw 4vw;
         width: 100vw;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
 
     main {
@@ -106,7 +108,6 @@ main {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
         border-radius: 20px;
         background-color: var(--Color_Blue);
         padding: 8vw;
@@ -125,7 +126,7 @@ main {
 
     .nombre{
         font-weight:lighter;
-        font-size: 18px;
+        font-size: 20px;
         display: block;
     }
 
