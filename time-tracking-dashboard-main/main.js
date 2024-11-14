@@ -1,15 +1,56 @@
-// fetch se utiliza para buscar los datos en la api que deseamos consumir
+async function obtenerDatos() {
+    try {
+        const respuesta = await fetch('data.json');
+        if (!respuesta.ok) {
+            throw new Error("Error en la petición");
+        }
 
-let datos //Creare una variable que almacene los datos del objeto
+        const datos = await respuesta.json();
+        mostrarTareas(datos, 'daily'); // Mostrar las tareas diarias por defecto
 
-fetch('data.json').then((response) =>{ //realiza una llamada de retorno
-    if(!response.ok){//Si la respuesta es incorrecta
-        return console.log('Oops! something went wrong.')//Envia este mensaje
-    }else{
-        return response.json() //Si la respuesta es incorrecta, envia este otro
+        // Asignar eventos a los botones
+        document.getElementById('Day').addEventListener('click', () => mostrarTareas(datos, 'daily'));
+        document.getElementById('Week').addEventListener('click', () => mostrarTareas(datos, 'weekly'));
+        document.getElementById('Month').addEventListener('click', () => mostrarTareas(datos, 'monthly'));
+
+    } catch (error) {
+        console.error('Error:', error);
     }
-}).then((data) => { //El bloque then se le suele llamar promesa
-    // Registra los datos en un objeto para posteriormente mostrarlos en consola
-    datos = data 
-})
+}
 
+function mostrarTareas(tareasData, periodo) {
+    const tareasContainer = document.getElementById('tareas');
+    tareasContainer.innerHTML = ''; // Limpiar el contenedor antes de mostrar las tareas
+
+    tareasData.forEach((tarea) => {
+        // Crear el contenedor de la tarea
+        const tareaDiv = document.createElement('div');
+        tareaDiv.classList.add('tarea');
+
+        // Generar la estructura HTML con los datos de la tarea según el periodo
+        tareaDiv.innerHTML = `
+        <div class="descripcion-tarea">
+          <div class="opciones-tarea">
+            <h2 class="tituloEvento">${tarea.title}</h2>
+            <img src="images/icon-ellipsis.svg" alt="boton para opciones">
+          </div>
+
+          <div class="date-tarea">
+            <span class="current">${tarea.timeframes[periodo].current} hrs </span>
+            <span class="previous"> Last ${capitalize(periodo)} ${tarea.timeframes[periodo].previous} hrs</span>
+          </div>
+        </div>
+      `;
+
+        // Añadir la tarea generada al contenedor principal
+        tareasContainer.appendChild(tareaDiv);
+    });
+}
+
+// Función para capitalizar el primer carácter de un string
+function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+// Ejecutar la función para obtener y mostrar los datos
+obtenerDatos();

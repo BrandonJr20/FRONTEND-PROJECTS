@@ -1,81 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Time tracking dashboard</title>
   <link rel="stylesheet" href="style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      color: white;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: white;
+    }
   </style>
 </head>
+
 <body>
 
-  Report for
-  Jeremy Robson
+  <main>
+    <div class="perfil">
+      <div class="info-perfil">
+        <img src="images/image-jeremy.png" alt="imagen de Jeremy Robson">
+        <div class="info-perfil-details">
+          <span class="report">Report for</span>
+          <span class="nombre">Jeremy Robson</span>
+        </div>
+      </div>
 
-  Daily
-  Weekly
-  Monthly
+      <div class="date-perfil">
+        <span id="Day">
+          Daily
+        </span>
+        <span id="Week">
+          Weekly
+        </span>
+        <span id="Month">
+          Monthly
+        </span>
+      </div>
+    </div>
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+    <div class="tareas" id="tareas">
+      <!--     
+      <div class="tarea">
+        <div class="descripcion-tarea">
+          <h2>Work</h2>
+          <ul>
+            <li>
+            5hrs daily
+            </li>
+            <li>Previous - 7hrs  daily li>
+            <li>32hrs  weekly li>
+            <li>Previous - 36hrs  weekly li>
+            <li>103hrs  monthly li>
+            <li>Previous - 128hrs  monthly li>
+          </ul>
+        </div>
+      </div> -->
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
+    </div>
+  </main>
 
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.linkedin.com/in/brandonjrcortez">Brandon Cortez</a>.
   </div>
+
 </body>
 <script src="main.js"></script>
+
 </html>
