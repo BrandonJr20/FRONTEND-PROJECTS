@@ -1,11 +1,11 @@
-async function obtenerDatos() {
+async function obtenerDatos() { //Funcion asincrona
     try {
-        const respuesta = await fetch('data.json');
+        const respuesta = await fetch('data.json'); //Guardamo en una variable el JSON/Api para luego poder recorrerlo
         if (!respuesta.ok) {
-            throw new Error("Error en la petición");
+            throw new Error("Error en la petición"); //Se valida, si la respuesta no es valida, mostrara un error
         }
 
-        const datos = await respuesta.json();
+        const datos = await respuesta.json(); //Espera a que el el archivo json cargue para almacenarlo en una variable
         mostrarTareas(datos, 'daily'); // Mostrar las tareas diarias por defecto
 
         // Asignar eventos a los botones
@@ -49,7 +49,7 @@ function mostrarTareas(tareasData, periodo) {
 
 // Función para capitalizar el primer carácter de un string
 function capitalize(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+    return string.charAt(0).toUpperCase() + string.slice(1); //Vuelve en mayuscula el primer caracter del string
 }
 
 // Ejecutar la función para obtener y mostrar los datos
