@@ -70,6 +70,8 @@ button{
     }
 }
 
+
+/* Estilos para la vista de navegador */
 @media (min-width:501px) {
     body {
         height: 100vh;
