@@ -64,15 +64,455 @@ button{
     text-align: center;
 }
 
-@media (max-width:500px) {
-    body{
+
+/* dimensiones para dispositivos moviles pequeños */
+@media (max-width:480px) {
+    body {
         height: 100%;
+    }
+
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10vw;
+        border-radius: 40px;
+    }
+
+    .title{
+        display: flex;
+        flex-direction: column;
+        margin: 15vw;
+
+    }
+
+    .title span{
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: 0.5em;
+    }
+
+    .operations{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .operations label{
+        margin-bottom: 1vw;
+        color: var(--ColorDark_grayish_cyan);
+        font-size: 22px;
+    }
+
+    .account, .tip, .people, .result{
+        margin: 4vw 0;
+    }
+
+    .account{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column  ;
+    }
+
+    .result{
+        border: 1px solid;
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    input, button{
+        width: 100%;
+        padding:1vw;
+        font-size:24px;
+        border-radius: 10px;
+        border: none;;
+    }
+
+    button:hover{
+        background-color: var(--ColorStrong_cyan);
+        color: var(--ColorVery_dark_cyan);
+        cursor: pointer;
+    }
+
+    input:focus{
+        border:3px solid var(--ColorStrong_cyan);
+        outline: none;
+    }
+    
+    .icon{
+        left: 1vw;
+        width: 20px;
+    }
+
+    .tip-buttons{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4vw;
+    }
+
+    .tip-buttons button{
+        border-radius: 5px;
+        padding: 3vw;
+    }
+
+    .people{
+        width: 100%;
+    }
+    
+
+    .result{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 5vw;
+    }
+
+    .result label{
+        font-size: 20px;
+        color: var(--ColorWhite);
+    }
+
+    .person{
+        color: var(--ColorDark_grayish_cyan);
+    }
+    
+    .result-tipAmount, .result-total{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 2vw;
+    }
+
+    .result-tipAmount-description{
+        text-align: right;
+        width: 100%;
+    }
+
+    .result input{
+        font-size: 30px;
+        border:none;
+        color:var(--ColorStrong_cyan);
+        background-color: transparent;
+    }
+
+    .reset{
+        margin-top: 3vw;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background-color: var(--ColorDark_grayish_cyan);
+        color: var(--ColorVery_dark_cyan);
+    }
+
+    .reset:hover{
+        background-color: var(--ColorLight_grayish_cyan);
     }
 }
 
 
-/* Estilos para la vista de navegador */
-@media (min-width:501px) {
+/* dimensiones para telefonos de tamano mediano */
+@media (min-width: 481px) and (max-width:767px) {
+    body {
+        height: 100%;
+    }
+
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10vw;
+        border-radius: 40px;
+    }
+
+    .title{
+        display: flex;
+        flex-direction: column;
+        margin: 15vw;
+
+    }
+
+    .title span{
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: 0.5em;
+    }
+
+    .operations{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .operations label{
+        margin-bottom: 1vw;
+        color: var(--ColorDark_grayish_cyan);
+        font-size: 22px;
+    }
+
+    .account, .tip, .people, .result{
+        margin: 4vw 0;
+    }
+
+    .account{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column  ;
+    }
+
+    .result{
+        border: 1px solid;
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    input, button{
+        width: 100%;
+        padding:1vw;
+        font-size:24px;
+        border-radius: 10px;
+        border: none;;
+    }
+
+    button:hover{
+        background-color: var(--ColorStrong_cyan);
+        color: var(--ColorVery_dark_cyan);
+        cursor: pointer;
+    }
+
+    input:focus{
+        border:3px solid var(--ColorStrong_cyan);
+        outline: none;
+    }
+    
+    .icon{
+        left: 1vw;
+        width: 20px;
+    }
+
+    .tip-buttons{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4vw;
+    }
+
+    .tip-buttons button{
+        border-radius: 5px;
+        padding: 3vw;
+    }
+
+    .people{
+        width: 100%;
+    }
+    
+
+    .result{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 3vw;
+    }
+
+    .result label{
+        font-size: 20px;
+        color: var(--ColorWhite);
+    }
+
+    .person{
+        color: var(--ColorDark_grayish_cyan);
+    }
+    
+    .result-tipAmount, .result-total{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 2vw;
+    }
+
+    .result-tipAmount-description{
+        width: 50%;
+    }
+
+    .result input{
+        font-size: 40px;
+        border:none;
+        color:var(--ColorStrong_cyan);
+        background-color: transparent;
+    }
+
+    .reset{
+        margin-top: 3vw;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background-color: var(--ColorDark_grayish_cyan);
+        color: var(--ColorVery_dark_cyan);
+    }
+
+    .reset:hover{
+        background-color: var(--ColorLight_grayish_cyan);
+    }
+}
+
+/* dimensiones para tablets */
+@media (min-width: 768px) and (max-width:1200px) {
+    body {
+        height: 100vh;
+        margin: 0 10vw;
+    }
+
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+        padding: 2vw;
+        border-radius: 20px;
+    }
+
+    .title{
+        display: flex;
+        flex-direction: column;
+        margin: 2vw 0 1vw 0;
+
+    }
+
+    .title span{
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+    }
+
+    .operations{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .operations label{
+        margin-bottom: 1vw;
+        color: var(--ColorDark_grayish_cyan);
+        font-size: 22px;
+    }
+
+    .account{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column  ;
+    }
+
+    .result{
+        border: 1px solid;
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    input, button{
+        width: 100%;
+        padding:1vw;
+        font-size:24px;
+        border-radius: 10px;
+        border: none;;
+    }
+
+    button:hover{
+        background-color: var(--ColorStrong_cyan);
+        color: var(--ColorVery_dark_cyan);
+        cursor: pointer;
+    }
+
+    input:focus{
+        border:3px solid var(--ColorStrong_cyan);
+        outline: none;
+    }
+    
+    .icon{
+        left: 0;
+        width: 20px;
+    }
+
+    .tip-buttons{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap:1vw ;
+    }
+
+    .people{
+        width: 100%;
+    }
+    
+
+    .result{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 3vw;
+    }
+
+    .result label{
+        font-size: 20px;
+        color: var(--ColorWhite);
+        text-align: center;
+    }
+
+    .person{
+        color: var(--ColorDark_grayish_cyan);
+    }
+    
+    .result-tipAmount, .result-total{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 2vw;
+    }
+
+    .result-tipAmount-description{
+        width: 50%;
+    }
+
+    .result input{
+        font-size: 40px;
+        border:none;
+        color:var(--ColorStrong_cyan);
+        background-color: transparent;
+    }
+
+    .reset{
+        margin-top: 3vw;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background-color: var(--ColorDark_grayish_cyan);
+        color: var(--ColorVery_dark_cyan);
+    }
+
+    .reset:hover{
+        background-color: var(--ColorLight_grayish_cyan);
+    }
+}
+
+/* dimensiones para computadoras */
+@media (min-width:1201px) {
     body {
         height: 100vh;
         margin: 0 20vw;
@@ -149,8 +589,7 @@ button{
     }
     
     .icon{
-        top: 1vw;
-        left: 1vw;
+        left: 0;
         width: 20px;
     }
 
@@ -190,12 +629,13 @@ button{
         align-items: flex-start;
         margin-bottom: 2vw;
     }
+
     .result-tipAmount-description{
-        width: 100%;
+        width: 50%;
     }
 
     .result input{
-        font-size: 50px;
+        font-size: 40px;
         border:none;
         color:var(--ColorStrong_cyan);
         background-color: transparent;
