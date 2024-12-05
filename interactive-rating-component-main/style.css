@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "Overpass";
+    src: url(https://fonts.google.com/specimen/Overpass);
+}
+
+:root{
+
+    /* ### Primary */
+
+    --Color_Orange: hsl(25, 97%, 53%); /*Active submit*/
+    
+    /* ### Neutral */
+    
+    --Color_White: hsl(0, 0%, 100%); /*h1*/
+    --Color_Light_Grey: hsl(217, 12%, 63%); /*Etiqueta p*/
+    --Color_Dark_Blue: hsl(213, 19%, 18%); /*Main*/
+    --Color_Very_Dark_Blue: hsl(216, 12%, 8%); /*Body*/
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Overpass", sans-serif;
+}
+
+body{
+    background-color: var(--Color_Very_Dark_Blue);
+}
+
+main{
+    background-color: var(--Color_Dark_Blue);
+}
+
+p{
+    color: var(--Color_Light_Grey);
+}
+h1{
+    color: white;
+}
+
+input[type="submit"]{
+    background-color: var(--Color_Orange) ;
+    color: white;
+}
+
+input[type="submit"]:hover, input[type="submit"]:active{
+    background-color: var(--Color_White) ;
+    color: var(--Color_Very_Dark_Blue);
+}
+
+button{
+    background-color: var(--Color_Light_Grey);
+    color: white;
+}
+
+button:active{
+    color: var(--Color_Very_Dark_Blue);
+    background-color: var(--Color_White);
+}
+
+button:hover{
+    background-color: var(--Color_Orange);
+    color: white;
+}
+
+@media (max-width:500px) {
+
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0 5vw;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        padding: 5vw;
+    }
+
+    .container-form{
+
+    }
+
+    .container-form-completed{
+        display: none;
+    }
+    
+}
